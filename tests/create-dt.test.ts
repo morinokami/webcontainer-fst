@@ -61,4 +61,8 @@ describe('createDt', () => {
 			children: [],
 		});
 	});
+
+	it('throws an InvalidPathError if the path is invalid', () => {
+		expect(() => createDt('invalid')).toThrowError('Invalid path invalid');
+	});
 });

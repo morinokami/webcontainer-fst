@@ -2,9 +2,10 @@
 
 import type { FileSystemTree } from '@webcontainer/api';
 
-import type { DirectoryTree } from './create-dt';
+import { createDt } from './create-dt';
 
-export function createFst(tree: DirectoryTree): FileSystemTree {
+export function createFst(path: string): FileSystemTree {
+	const dt = createDt(path);
 	// TODO: Implement
 	return {};
 }

@@ -2,7 +2,7 @@
 
 import dirTree from 'directory-tree';
 
-export type DirectoryTree = FileNodeDt | DirectoryNodeDt;
+type DirectoryTree = FileNodeDt | DirectoryNodeDt;
 
 type FileNodeDt = {
 	path: string;
@@ -16,8 +16,17 @@ type DirectoryNodeDt = {
 	children: DirectoryTree[];
 };
 
+class InvalidPathError extends Error {
+	constructor(path: string) {
+		super(`Invalid path ${path}`);
+	}
+}
+
 export function createDt(path: string): DirectoryTree {
 	const tree = dirTree(path, { attributes: ['type', 'extension'] });
+	if (!tree) {
+		throw new InvalidPathError(path);
+	}
 	return {
 		path: tree.path,
 		name: tree.name,
