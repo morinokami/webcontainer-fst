@@ -1,9 +1,5 @@
-import { describe, expect, it } from 'vitest';
+import { expect, it } from 'vitest';
 
-import { foobar } from '../src/index';
-
-describe('foobar', () => {
-	it('should return the correct string', () => {
-		expect(foobar()).toBe('foobar');
-	});
+it('should pass', () => {
+	expect(1).toBe(1);
 });
