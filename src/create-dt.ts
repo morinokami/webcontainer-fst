@@ -1,5 +1,7 @@
 // Create a new DirectoryTree from a path
 
+import dirTree from 'directory-tree';
+
 export type DirectoryTree = FileNodeDt | DirectoryNodeDt;
 
 type FileNodeDt = {
@@ -11,10 +13,18 @@ type FileNodeDt = {
 type DirectoryNodeDt = {
 	path: string;
 	name: string;
-	children: DirectoryTree;
+	children: DirectoryTree[];
 };
 
 export function createDt(path: string): DirectoryTree {
-	// TODO: Implement
-	return {} as DirectoryTree;
+	const tree = dirTree(path, { attributes: ['type', 'extension'] });
+	return {
+		path: tree.path,
+		name: tree.name,
+		...(tree.type === 'file'
+			? { extension: tree.extension ?? '' }
+			: {
+					children: tree.children?.map((child) => createDt(child.path)) ?? [],
+			  }),
+	};
 }
