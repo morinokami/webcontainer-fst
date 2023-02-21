@@ -7,12 +7,14 @@ type DirectoryTree = FileNodeDt | DirectoryNodeDt;
 type FileNodeDt = {
 	path: string;
 	name: string;
+	type: 'file';
 	extension: string;
 };
 
 type DirectoryNodeDt = {
 	path: string;
 	name: string;
+	type: 'directory';
 	children: DirectoryTree[];
 };
 
@@ -31,8 +33,9 @@ export function createDt(path: string): DirectoryTree {
 		path: tree.path,
 		name: tree.name,
 		...(tree.type === 'file'
-			? { extension: tree.extension ?? '' }
+			? { type: 'file', extension: tree.extension ?? '' }
 			: {
+					type: 'directory',
 					children: tree.children?.map((child) => createDt(child.path)) ?? [],
 			  }),
 	};
