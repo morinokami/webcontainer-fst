@@ -10,7 +10,7 @@ src
 └── package.json
 ```
 
-To obtain the FileStructureTree corresponding to this `src` directory, execute the `createFst` function as follows:
+To obtain the FileSystemTree corresponding to this `src` directory, execute the `createFst` function as follows:
 
 ```sh
 $ cat build-files.js 
