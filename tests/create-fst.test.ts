@@ -32,7 +32,7 @@ describe('createFst', () => {
 	});
 
 	it('should create a FileSystemTree from a directory path', async () => {
-		expect(await createFst('dir0')).toEqual({
+		expect(await createFst('dir0', false)).toEqual({
 			dir0: {
 				directory: {
 					'bar.txt': {
@@ -54,8 +54,27 @@ describe('createFst', () => {
 		});
 	});
 
+	it('should contain only the contents of a directory if childrenOnly is true', async () => {
+		expect(await createFst('dir0')).toEqual({
+			'bar.txt': {
+				file: {
+					contents: 'bar',
+				},
+			},
+			dir1: {
+				directory: {
+					'baz.png': {
+						file: {
+							contents: new Uint8Array([8, 6, 7, 5, 3, 0, 9]),
+						},
+					},
+				},
+			},
+		});
+	});
+
 	it('should create a FileSystemTree from an empty directory path', async () => {
-		expect(await createFst('empty')).toEqual({
+		expect(await createFst('empty', false)).toEqual({
 			empty: {
 				directory: {},
 			},

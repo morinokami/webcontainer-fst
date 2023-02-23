@@ -31,7 +31,6 @@
 		"@typescript-eslint/eslint-plugin": "^5.52.0",
 		"@typescript-eslint/parser": "^5.52.0",
 		"@webcontainer/api": "^1.0.1",
-		"directory-tree": "^3.5.1",
 		"eslint": "^8.34.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-simple-import-sort": "^10.0.0",
