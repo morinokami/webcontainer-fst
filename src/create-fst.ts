@@ -1,4 +1,4 @@
-// Create a FileSystemTree from the given path
+// Create a FileSystemTree from a given path
 
 import { Stats } from 'node:fs';
 import fs from 'node:fs/promises';

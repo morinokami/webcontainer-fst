@@ -2,9 +2,13 @@
 	"name": "create-fst",
 	"version": "0.0.1",
 	"author": "Shinya Fujino <shf0811@gamil.com> (https://github.com/morinokami)",
-	"description": "",
+	"description": "Create a WebContainer-compatible FileSystemTree from a given path",
 	"license": "MIT",
-	"keywords": [],
+	"keywords": [
+		"stackblitz",
+		"webcontainer",
+		"nodejs"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/morinokami/create-fst"
