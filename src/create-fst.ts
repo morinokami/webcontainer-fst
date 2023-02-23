@@ -7,7 +7,10 @@ import { isText } from 'istextorbinary';
 
 import { createDt } from './create-dt';
 
-export async function createFst(path: string): Promise<FileSystemTree> {
+export async function createFst(
+	path: string,
+	childrenOnly = true,
+): Promise<FileSystemTree> {
 	const dt = createDt(path);
 
 	if (dt.type === 'file') {
@@ -20,6 +23,7 @@ export async function createFst(path: string): Promise<FileSystemTree> {
 			},
 		};
 	} else {
+		// TODO: Use childrenOnly
 		return {
 			[dt.name]: {
 				directory: await dt.children.reduce(
