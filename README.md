@@ -14,7 +14,7 @@ To obtain the FileSystemTree corresponding to this `src` directory, execute the 
 
 ```sh
 $ cat build-files.js 
-import { createFst } from 'webcontainer-fst'
+import { createFst } from 'webcontainer-fst';
 
 const fst = await createFst('./src');
 console.log(JSON.stringify(fst, null, 2));
