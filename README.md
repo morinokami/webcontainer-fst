@@ -2,6 +2,8 @@
 
 webcontainer-fst creates a WebContainer-compatible [FileSystemTree](https://webcontainers.io/api#filesystemtree) from a given path.
 
+[Demo](https://stackblitz.com/edit/webcontainer-fst-demo?file=build-files.js)
+
 Suppose the directory you want to [mount](https://webcontainers.io/api#%E2%96%B8-mount) on WebContainer has the following file structure:
 
 ```
