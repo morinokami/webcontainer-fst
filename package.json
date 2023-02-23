@@ -1,6 +1,6 @@
 {
 	"name": "webcontainer-fst",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "Shinya Fujino <shf0811@gamil.com> (https://github.com/morinokami)",
 	"description": "Create a WebContainer-compatible FileSystemTree from a given path",
 	"license": "MIT",
