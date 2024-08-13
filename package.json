@@ -1,7 +1,7 @@
 {
 	"name": "webcontainer-fst",
 	"version": "0.0.2",
-	"author": "Shinya Fujino <shf0811@gamil.com> (https://github.com/morinokami)",
+	"author": "Shinya Fujino <shf0811@gmail.com> (https://github.com/morinokami)",
 	"description": "Create a WebContainer-compatible FileSystemTree from a given path",
 	"license": "MIT",
 	"keywords": [
@@ -30,19 +30,19 @@
 		"test": "vitest"
 	},
 	"devDependencies": {
-		"@types/mock-fs": "^4.13.1",
-		"@types/node": "^18.14.0",
+		"@types/mock-fs": "4.13.4",
+		"@types/node": "22.2.0",
 		"@typescript-eslint/eslint-plugin": "^5.52.0",
 		"@typescript-eslint/parser": "^5.52.0",
-		"@webcontainer/api": "^1.0.1",
+		"@webcontainer/api": "1.2.0",
 		"eslint": "^8.34.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-simple-import-sort": "^10.0.0",
-		"istextorbinary": "^6.0.0",
-		"mock-fs": "^5.2.0",
-		"prettier": "^2.8.4",
-		"tsup": "^6.6.3",
-		"typescript": "^4.9.5",
-		"vitest": "^0.28.5"
+		"istextorbinary": "9.5.0",
+		"mock-fs": "5.2.0",
+		"prettier": "3.3.3",
+		"tsup": "8.2.4",
+		"typescript": "5.5.4",
+		"vitest": "2.0.5"
 	}
 }
